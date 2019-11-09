@@ -1,26 +1,27 @@
+#include <Arduino.h>
 #include "timer.h"
-timerContext c;
+mikTimer t;
 
 
-void handlerZgas(void *);
+void handlerZgas();
 
 
 void setup() {
-	 set_timer(&c, 1000, handlerZgas);
+	 t.set_timer(1000, handlerZgas);
 	 pinMode(13, OUTPUT);
 }
 
 void loop() {
-	update_timer(&c );
+	t.update();
 }
 
 
-void handlerZapal(void *) {
+void handlerZapal() {
 	 digitalWrite(13, HIGH);
-	 set_timer(&c, 1000, handlerZgas);
+	 t.set_timer(1000, handlerZgas);
 }
 
-void handlerZgas(void *) {
+void handlerZgas() {
 	 digitalWrite(13, LOW);
-	 set_timer(&c, 1000, handlerZapal);
+	 t.set_timer(1000, handlerZapal);
 }
