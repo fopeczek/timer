@@ -1,0 +1,23 @@
+{
+"name": "timer",
+"version": "0.0.2",
+"repository":
+{
+    "type": "git",
+    "url": "https://github.com/fopeczek/timer.git"
+},
+"description": "Libraty, witch allows queue events that have to happen in future.",
+"authors": [
+{
+	"name": "Mikołaj Krawczuk",
+	"email": "mikolaj@statystyka.net"
+},
+{
+	"name": "Adam Ryczkowski",
+	"email": "adam@statystyka.net"
+}],
+"license": "Apache-2.0",
+"dependencies": {
+	"Silent/function_objects": "^1.0.0"
+}
+}
