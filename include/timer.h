@@ -2,7 +2,6 @@
 #include "function_objects.h"
 #include "Arduino.h"
 
-void nofun();
 
 class mikTimer{
 public:
@@ -13,6 +12,7 @@ public:
 	uint32_t how_much_to_wait() {return max(0,m_budzik - millis());}
 	void update();
 private:
+	static void nofun(){}
 	uint32_t m_budzik;
 	FunctionObject<void(void)> m_event_handler;
 	bool m_event_is_set;

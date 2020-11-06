@@ -35,7 +35,3 @@ void mikTimer::update() {
 		}
 	}
 }
-
-void nofun() {
-
-}
